@@ -3,4 +3,6 @@ from django.http import HttpResponse
 
 
 def index(request):
-    return render('index.html')
+    return render(request, 'index.html')
+
+def category
