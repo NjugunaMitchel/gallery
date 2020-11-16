@@ -15,8 +15,11 @@ body{
     height: 400px;
     border-radius: 100px;
     border:2px solid black;
-    background: url('/media/photos/nature.jpeg');
-    object-fit: contain;
+    background: url('/media/photos/setup.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    
 }
 
 #first{
@@ -26,9 +29,11 @@ body{
     border:2px solid black;
     border-bottom: 0cm;
     border-radius: 100px;
-    background: url('/media/photos/nature.jpeg');
+    background: url('/media/photos/memories.jpeg');
     background-repeat: no-repeat;
-    object-fit: contain;
+    background-size: cover;
+    background-position: center;
+    
 
 }
 
@@ -37,8 +42,10 @@ body{
     height: 500px;
     border-radius: 100px;
     border:2px solid rgb(20, 9, 9);
-    background: url('/media/photos/photo2.jpeg');
-    object-fit: contain;
+    background: url('/media/photos/photographer.jpeg');
+    background-repeat: no-repeat;
+    background-size: covers;
+    background-position: center;
 }
 
 .quote h3{
