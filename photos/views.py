@@ -20,3 +20,7 @@ def search_results(request):
     else:
         message = "You haven't searched for any term"
         return render(request, 'photos.html',{"message":message})
+
+def all_photos(request):
+   all_photos= Pictures.objects.all()
+   return render(request,'photos.html',{"photos":all_photos})
