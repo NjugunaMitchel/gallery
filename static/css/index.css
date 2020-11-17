@@ -1,10 +1,3 @@
-body{
-    background-color: #585451;
-    overflow: hidden;
-    height:100vh;
-}
-
-
 .col-md-3{
     margin:auto;
     justify-content: space-around;
