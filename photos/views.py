@@ -1,12 +1,11 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from .models import Pictures,Editor, category
 
 
 def index(request):
     return render(request, 'index.html')
 
-def photos(request):
-    return render(request, 'photos.html')
 
 def search_results(request):
 
@@ -21,6 +20,9 @@ def search_results(request):
         message = "You haven't searched for any term"
         return render(request, 'photos.html',{"message":message})
 
-def all_photos(request):
-   all_photos= Pictures.objects.all()
-   return render(request,'photos.html',{"photos":all_photos})
+def photos(request):
+   photos= Pictures.objects.all()
+   context = {'photos':photos}
+   return render(request,'photos.html',context)
+
+
