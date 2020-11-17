@@ -1,4 +1,5 @@
 from django.db import models
+from cloudinary.models import CloudinaryField
 
 # Create your models here.
 
@@ -29,7 +30,7 @@ class Pictures(models.Model):
     title = models.CharField(max_length =60)
     editor = models.ForeignKey(Editor,on_delete=models.CASCADE)
     category = models.ManyToManyField(category)
-    photo_image = models.ImageField(upload_to = 'photos/',default="url_for('image.jpg')")
+    photo_image = CloudinaryField('image')
 
 
     @classmethod
