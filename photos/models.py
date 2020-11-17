@@ -31,6 +31,7 @@ class Pictures(models.Model):
     editor = models.ForeignKey(Editor,on_delete=models.CASCADE)
     category = models.ManyToManyField(category)
     photo_image = CloudinaryField('image')
+    info=models.TextField(max_length=255, default="picture details")
 
 
     @classmethod
