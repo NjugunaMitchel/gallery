@@ -11,7 +11,6 @@ def photos(request):
    context = {'photos':photos}
    return render(request,'photos.html',context)
 
-   
 def search_results(request):
 
     if 'category' in request.GET and request.GET["category"]:
