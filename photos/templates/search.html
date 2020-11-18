@@ -1,24 +1,26 @@
-{%extends 'base.html'%} 
+{%extends 'base.html'%}  
+{% load bootstrap4 %}
+
 {% block content %}
 <div class="container">
 
   <div class="row">
     {% if photos %}
-      <h2>Found {{ category|length }} of searched pictures {{message}}</h2>
+      <h2>Found {{ photos|length }} of searched pictures {{message}}</h2>
     {% else %}
       <h2> No images under  this category {{message}}</h2>
     {% endif %}
 
   </div>
 
-  <div class="row">
+  <div class="rows">
 
-  {% if articles %}
-    {% for category in category %}
-      <div class="col-md-4">
-        <img src="{{ photo.photo_image.url }}">
-      </div>
-    {% endfor %}
+  {% if photos %}
+  {% for photo in photos %}
+  <div class="col-md-4">
+    <a href="{% url 'details' photo_id=photo.id %}"><img src="{{ photo.photo_image.url }}" style="margin-bottom: 20px;"></a>
+  </div>
+{% endfor %}
   {% endif %}
   </div>
 </div>

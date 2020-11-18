@@ -9,7 +9,8 @@
 
     {% for photo in photos %}
       <div class="col-md-4">
-         <img src="{{ photo.photo_image.url }}">
+         <a href="{% url 'details' photo_id=photo.id %}"><img src="{{ photo.photo_image.url }}" style="margin-bottom: 20px;"></a>
+         
       </div>
     {% endfor %}
 

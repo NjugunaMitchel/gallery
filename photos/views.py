@@ -30,9 +30,9 @@ def search_results(request):
 
 def photo(request,photo_id):
     try:
-        photo = Pictures.objects.get(id = photo_id)
+        photos = Pictures.objects.get(id = photo_id)
     except DoesNotExist:
         raise Http404()
-    return render(request,"photo.html", {"photo":photo})
+    return render(request,"photo.html", {"photos":photos})
 
 

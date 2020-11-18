@@ -6,6 +6,8 @@ body{
 .rows{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    grid-gap: 5px;
+    margin: 10px;
 }
 
 
@@ -13,4 +15,7 @@ img{
     width:250px;
     height: 300px;
     box-shadow: 5px 3px 5px #CCECFE;
+    
 }
+
+

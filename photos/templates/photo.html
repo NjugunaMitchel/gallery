@@ -1,8 +1,26 @@
 {% extends 'base.html' %}
 {% load bootstrap4 %}
 {% load static %}
-<div class="container">
-    <div class="row">
-        <img src="{{ photo.photo_image.url }}">
-    </div>
-</div>
+
+ {% block content %}
+
+ <div class="container">
+ 
+   <div class="row">
+    
+     <img src="{{photos.photo_image.url}}"  class="img-responsive" alt="image" style="margin:auto;height:70vh;width:70vw;object-fit:fill;">
+   </div>
+
+   <div class="row">
+     <h1 class="text-center">Title:{{photos.title}}</h1>
+   </div>
+
+   <div class="row">
+     <p>Details:{{photos.info}}</p>
+   </div>
+
+  
+
+ </div>
+
+ {% endblock %}
